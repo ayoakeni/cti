@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/signup",
+      "dest": "/"
+    },
+    {
+      "src": "/verifyEmail",
+      "dest": "/"
+    },
+    {
+      "src": "/reset-password",
+      "dest": "/"
+    },
+    {
+      "src": "/check-email",
+      "dest": "/"
+    },
+    {
+      "src": "/confirm-password",
+      "dest": "/"
+    },
+    {
+      "src": "/vehicle-tracking",
+      "dest": "/"
+    },
+    {
+      "src": "/vehicles",
+      "dest": "/"
+    },
+    {
+      "src": "/create-vehicle",
+      "dest": "/"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+body {
+  background: #93bccb10 !important;
+}
+p {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+  cursor: pointer !important;
+  height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+  cursor: pointer !important;
+  background: #f1f1f1 !important;
+  padding: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #939393 !important;
+  border-radius: 10px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #939393 !important;
+  cursor: pointer !important;
+}
+th,
+td {
+  font-size: 12px !important;
+}
