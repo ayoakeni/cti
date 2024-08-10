@@ -18,6 +18,8 @@ export const useLogin = async (userData: ILoginUser) => {
       headers: { "Content-Type": "multipart/form-data" },
     });
     console.log(response);
+    console.log(response.data.token);
+    localStorage.setItem('token', response.data.token); // Store token from login response
     return response.data;
   } catch (error: any) {
     console.log(error.response.data);

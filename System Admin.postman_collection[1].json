@@ -1,0 +1,893 @@
+{
+	"info": {
+		"_postman_id": "51014a8f-9d3c-4da5-a45a-2ecf79d64f77",
+		"name": "System Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8847438",
+		"_collection_link": "https://orange-robot-802114.postman.co/workspace/Team-Workspace~de45957b-5751-4de6-8e55-3e7f1d5afb8b/collection/8847438-51014a8f-9d3c-4da5-a45a-2ecf79d64f77?action=share&source=collection_link&creator=8847438"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Olusesan",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "Remilekun",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Biala",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "07017772260",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "starem2004@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/initial/register",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"initial",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ucmtn2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "770793",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "afg123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "afg123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/user/change/password",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"change",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "starem2004@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "414521",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/user/verify/email",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"verify",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|79rsLcQtAJHVmQP5d9z5PwABUpyh136oE6rJ4VrN3daad94d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/user/logout",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|79rsLcQtAJHVmQP5d9z5PwABUpyh136oE6rJ4VrN3daad94d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ucmtn2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/user/login",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regenerate Otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ucmtn2@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/user/regenerate/otp",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"regenerate",
+								"otp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|F9gOOpPhzFHGpsLnugkIxJ7CbEjlcBl2nyJSuGff79dadeba",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "c085645f276fd835042d3730d6a8fc99f6a3f0e8dd3d3ee73f61bbe9db425f13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Kingsley",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Uche",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ad@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/create/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"create",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|F9gOOpPhzFHGpsLnugkIxJ7CbEjlcBl2nyJSuGff79dadeba",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/get/all/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get",
+								"all",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Access Control",
+			"item": [
+				{
+					"name": "Create permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|F9gOOpPhzFHGpsLnugkIxJ7CbEjlcBl2nyJSuGff79dadeba",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "permission[]",
+									"value": "create user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/admin/create/permission",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"create",
+								"permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|hv09Lk1QKWik1dAlYJFgqxPbn6OP7R6hBc0tejFf8549d79d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "source_code",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "perm_id[]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "assign_user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/admin/assign/permission",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"admin",
+								"assign",
+								"permission"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Create Vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|2hIvPn3hTanY9eSpQWPw3dNqARo8E4WvRuFNt7rPc4d49642",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "user must be created before creating ",
+									"type": "text"
+								},
+								{
+									"key": "make",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "Camry",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Sedan",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2020",
+									"type": "text"
+								},
+								{
+									"key": "vin",
+									"value": "1HGBH41JXMN109186",
+									"type": "text"
+								},
+								{
+									"key": "number_plate",
+									"value": "xyz 345 AA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/create/vehicle",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"create",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "make",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "vin",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "number_plate",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all vehicles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "httpS://cti.maypaseducation.com/api/view/vehicle",
+							"protocol": "httpS",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"view",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete/vehicle",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Tracker",
+			"item": [
+				{
+					"name": "Add Tracker",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|ZrKhmdtnddagDgSy0YstGgc6SwLKhUa4VgbFGM5s114cb06e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "protocol",
+									"value": "GT06",
+									"type": "text"
+								},
+								{
+									"key": "imei",
+									"value": "358657103974031",
+									"type": "text"
+								},
+								{
+									"key": "ip",
+									"value": "196.3.101.151",
+									"type": "text"
+								},
+								{
+									"key": "sim_no",
+									"value": "09034567890",
+									"type": "text"
+								},
+								{
+									"key": "params",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "port",
+									"value": "14000",
+									"type": "text"
+								},
+								{
+									"key": "network_protocol",
+									"value": "tcp",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_vin",
+									"value": "1HGBH41JXMN109186",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cti.maypaseducation.com/api/create/tracker",
+							"protocol": "https",
+							"host": [
+								"cti",
+								"maypaseducation",
+								"com"
+							],
+							"path": [
+								"api",
+								"create",
+								"tracker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/view/all/tracker",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"view",
+								"all",
+								"tracker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tracker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tracker_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/delete/tracker",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete",
+								"tracker"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
