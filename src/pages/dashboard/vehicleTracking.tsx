@@ -4,7 +4,6 @@ import Pusher from "pusher-js";
 import { Box, Flex, Skeleton } from "@chakra-ui/react";
 import Layout from "../../layouts/dashboard/sideBar";
 import LiveTrack from "../../layouts/dashboard/liveTrack";
-import GoogleMap from "../../map/GoogleMap";
 import {
   APIProvider,
   Map,
