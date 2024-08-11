@@ -47,15 +47,22 @@ const VehicleTracking = () => {
   };
 
   const getLastUpdate = async () => {
-    const myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      "Bearer 88|9RbCzSHvzTZ7QqAzCk3ys1YctShg5y9chnevOgQC1eccd809"
-    );
+    // Fetch token and authenticate
+    const token = localStorage.getItem("token");
+    // const myHeaders = new Headers();
+    // myHeaders.append(
+    //   "Authorization",
+    //   "Bearer 88|9RbCzSHvzTZ7QqAzCk3ys1YctShg5y9chnevOgQC1eccd809"
+    // );
+
+    // const requestOptions = {
+    //   method: "POST",
+    //   headers: myHeaders,
+    // }}
 
     const requestOptions = {
       method: "POST",
-      headers: myHeaders,
+      headers: {Authorization: `Bearer ${token}`,}
     };
 
     const response = await fetch(
@@ -113,7 +120,7 @@ const VehicleTracking = () => {
       >
         <LiveTrack display="block" />
         <Box width={"100%"} className="">
-          {/* <APIProvider apiKey={"AIzaSyDnKdXlv5lStHzJjhIoe08s0Bw4ZcQUB18"}>
+          <APIProvider apiKey={"AIzaSyDnKdXlv5lStHzJjhIoe08s0Bw4ZcQUB18"}>
             <Map
               style={{ width: "100%", height: "100vh", borderRadius: 40 }}
               defaultCenter={getInitialCenter()}
@@ -149,8 +156,7 @@ const VehicleTracking = () => {
                 </>
               )}
             </Map>
-          </APIProvider> */}
-          <GoogleMap />
+          </APIProvider>
         </Box>
       </Flex>
     </Layout>
