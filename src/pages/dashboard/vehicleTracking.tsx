@@ -4,6 +4,7 @@ import Pusher from "pusher-js";
 import { Box, Flex, Skeleton } from "@chakra-ui/react";
 import Layout from "../../layouts/dashboard/sideBar";
 import LiveTrack from "../../layouts/dashboard/liveTrack";
+import GoogleMap from "../../map/GoogleMap";
 import {
   APIProvider,
   Map,
@@ -112,7 +113,7 @@ const VehicleTracking = () => {
       >
         <LiveTrack display="block" />
         <Box width={"100%"} className="">
-          <APIProvider apiKey={"AIzaSyDnKdXlv5lStHzJjhIoe08s0Bw4ZcQUB18"}>
+          {/* <APIProvider apiKey={"AIzaSyDnKdXlv5lStHzJjhIoe08s0Bw4ZcQUB18"}>
             <Map
               style={{ width: "100%", height: "100vh", borderRadius: 40 }}
               defaultCenter={getInitialCenter()}
@@ -148,7 +149,8 @@ const VehicleTracking = () => {
                 </>
               )}
             </Map>
-          </APIProvider>
+          </APIProvider> */}
+          <GoogleMap />
         </Box>
       </Flex>
     </Layout>

@@ -12,7 +12,6 @@ import PendingBox from "../../components/pendingBox";
 import DueBox from "../../layouts/dashboard/dueBox";
 import OpenIssues from "../../layouts/dashboard/openIssues";
 import VehicleAss from "../../layouts/dashboard/vehicleAss";
-import GoogleMap from "../../map/GoogleMap";
 
 const Dashboard = () => {
   return (
@@ -28,7 +27,6 @@ const Dashboard = () => {
           gridGap={5}
         >
           <Box>
-            <GoogleMap />
             <RecentAlerts />
             <PieChartBox />
             <BusDisplay />
