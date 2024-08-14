@@ -41,7 +41,8 @@ const VehicleTracking = () => {
 
     const channel = pusher.subscribe("location");
     channel.bind("car-location", (data) => {
-      setCarDetails(data.vehicle);
+      console.log("Received car details from Pusher:", data);
+      setCarDetails(data.vehicle);  //Received car details
     });
   };
 
@@ -61,7 +62,7 @@ const VehicleTracking = () => {
 
     const requestOptions = {
       method: "POST",
-      headers: {Authorization: `Bearer ${token}`,}
+      headers: {Authorization: `Bearer ${token}`},
     };
 
     const response = await fetch(
@@ -144,10 +145,18 @@ const VehicleTracking = () => {
                       onCloseClick={handleInfoWindowClose}
                     >
                       <div>
-                        <h2>InfoWindow content!</h2>
+                        <h2>{carDetails ? carDetails.name : "Vehicle Information"}</h2>
                         <p>
-                          Some arbitrary html to be rendered into the
-                          InfoWindow.
+                          {carDetails ? (
+                            <>
+                              <strong>ID:</strong> {carDetails.id}<br />
+                              <strong>Last Updated:</strong> {lastLocation ? lastLocation.time : "N/A"}<br />
+                              <strong>Latitude:</strong> {lastLocation ? lastLocation.latitude : "N/A"}<br />
+                              <strong>Longitude:</strong> {lastLocation ? lastLocation.longitude : "N/A"}
+                            </>
+                          ) : (
+                            "Loading vehicle details..."
+                          )}
                         </p>
                       </div>
                     </InfoWindow>
